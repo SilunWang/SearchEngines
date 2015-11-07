@@ -1,0 +1,87 @@
+<DOC>
+<DOCNO> toyDocs-00001 </DOCNO>
+<DOCURL> http://fubar.com/toy1.html </DOCURL>
+<DOCHDR>
+HTTP/1.1 200 OK
+Date: Sat, 21 Feb 2009 02:29:03 GMT
+Content-Type: text/html; charset=utf-8
+</DOCHDR>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<body>
+
+Apple pie is very tasty.
+Apple computers are very popular.
+Apples and bananas are popular fruits.
+Pie is always popular.
+
+</body></html>
+</DOC>
+<DOC>
+<DOCNO> toyDocs-00002 </DOCNO>
+<DOCURL> http://fubar.com/toy2.html </DOCURL>
+<DOCHDR>
+HTTP/1.1 200 OK
+Date: Sat, 21 Feb 2009 02:29:03 GMT
+Content-Type: text/html; charset=utf-8
+</DOCHDR>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<body>
+
+An apple a day keeps the doctor away.
+Does an apple pie a day have the same health benefits?
+I always feel better after eating applie pie.
+
+</body></html>
+</DOC>
+<DOC>
+<DOCNO> toyDocs-00003 </DOCNO>
+<DOCURL> http://fubar.com/toy3.html </DOCURL>
+<DOCHDR>
+HTTP/1.1 200 OK
+Date: Sat, 21 Feb 2009 02:29:03 GMT
+Content-Type: text/html; charset=utf-8
+</DOCHDR>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<body>
+
+I love bananas.
+
+</body></html>
+</DOC>
+<DOC>
+<DOCNO> toyDocs-00004 </DOCNO>
+<DOCURL> http://fubar.com/toy4.html </DOCURL>
+<DOCHDR>
+HTTP/1.1 200 OK
+Date: Sat, 21 Feb 2009 02:29:03 GMT
+Content-Type: text/html; charset=utf-8
+</DOCHDR>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<body>
+
+Pie for lunch,
+apples for breakfast.
+Or, apple and pie for dinner.
+
+</body></html>
+</DOC>
+<DOC>
+<DOCNO> toyDocs-00005 </DOCNO>
+<DOCURL> http://fubar.com/toy5.html </DOCURL>
+<DOCHDR>
+HTTP/1.1 200 OK
+Date: Sat, 21 Feb 2009 02:29:03 GMT
+Content-Type: text/html; charset=utf-8
+</DOCHDR>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<body>
+
+Apples, apples, apples!
+
+</body></html>
+</DOC>
