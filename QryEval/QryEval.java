@@ -495,19 +495,32 @@ public class QryEval {
                     r.sort();
                     // a queue to store top weighted terms
                     List<Pair> queue = new LinkedList<Pair>();
-                    HashMap<String, Double> map = new HashMap<String, Double>();
-
+                    // recording score of every term
+                    HashMap<String, Double> ScoreMap = new HashMap<String, Double>();
+                    // recording ctf of every term
+                    HashMap<String, Long> CTFMap = new HashMap<String, Long>();
                     for (int i = 0; i < fbDocs; i++) {
                         // for every doc-i, get term vector
                         TermVector vector = new TermVector(r.getDocid(i), "body");
                         for (int j = 1; j < vector.stemsLength(); j++) {
-                            String term = vector.stemString(j);
-                            long ctf = vector.totalStemFreq(j);
+                            CTFMap.put(vector.stemString(j), vector.totalStemFreq(j));
+                        }
+                    }
+
+                    for (int i = 0; i < fbDocs; i++) {
+                        // for every doc-i, get term vector
+                        TermVector vector = new TermVector(r.getDocid(i), "body");
+                        // for every term in the map, sum up scores for every doc
+                        for (Map.Entry<String, Long> entry : CTFMap.entrySet()) {
+                            String term = entry.getKey();
+                            long ctf = entry.getValue();
                             double p_term = 0.0;
-                            if (map.containsKey(term))
-                                p_term = map.get(term);
-                            // for every unique term j, sum up among top retrieved documents
-                            int tf = vector.stemFreq(j);
+                            if (ScoreMap.containsKey(term))
+                                p_term = ScoreMap.get(term);
+                            // default tf
+                            int tf = 0;
+                            if (vector.indexOfStem(term) != -1)
+                                tf = vector.stemFreq(vector.indexOfStem(term));
                             // length(d)
                             int doc_len = vector.positionsLength();
                             // length(C)
@@ -518,12 +531,12 @@ public class QryEval {
                             double tmp = (tf + fbMu * p_MLE + 0.0) / (doc_len + fbMu);
                             tmp *= r.getDocidScore(i) * Math.log(((double) sum_len) / ctf);
                             p_term += tmp;
-                            map.put(term, p_term);
+                            ScoreMap.put(term, p_term);
                         }
                     }
 
-                    for (Map.Entry<String, Double> entry : map.entrySet()) {
-                        // ignore "app.com"
+                    for (Map.Entry<String, Double> entry : ScoreMap.entrySet()) {
+                        // ignore "app.com" "app,com"
                         if (entry.getKey().contains(".") || entry.getKey().contains(","))
                             continue;
                         // add the element to queue
