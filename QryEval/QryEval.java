@@ -483,7 +483,8 @@ public class QryEval {
                         r = new ScoreList();
                         while ((line = br.readLine()) != null) {
                             String[] arr = line.split(" +");
-                            r.add(Idx.getInternalDocid(arr[2]), Double.parseDouble(arr[4]));
+                            if (arr[0].equals(qid))
+                                r.add(Idx.getInternalDocid(arr[2]), Double.parseDouble(arr[4]));
                         }
                         br.close();
                     }
