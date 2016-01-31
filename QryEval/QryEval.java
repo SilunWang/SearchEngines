@@ -425,6 +425,17 @@ public class QryEval {
             return null;
     }
 
+    static ScoreList processLetorQuery(String query) {
+        ScoreList r = null;
+        try {
+            r = processQuery(query, new RetrievalModelBM25());
+        } catch (Exception e) {
+
+        }
+
+        return r;
+    }
+
     /**
      * Process the query file.
      *
